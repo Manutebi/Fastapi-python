@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='col-md-6 mx-auto text-center py-5'>
+    <div class='py-5 my-5'>
+<h1>Prueba fastapi x airtable</h1>
+
+{% if submitted_email and did_send %}
+    <p>Carga exitosa {{ submitted_email }}</p>
+{% endif %}
+
+<form method='POST'>
+    <input class='form-control' type='email' name='email' placeholder='Correo' required='required' />
+    <input class='btn btn-primary mt-3' type='submit' value='Ingresar' />
+</form>
+</div>
+</div>
+{% endblock %}
